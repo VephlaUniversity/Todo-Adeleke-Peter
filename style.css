@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-image: linear-gradient(135deg, #153677, #4e085f);
+  color: #fff;
+  min-height: 100vh;
+}
+
+header {
+  font-size: 1.5rem;
+}
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background-color: #fff;
+  outline: none;
+}
+form button {
+  color: #d88771;
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+form button:hover {
+  background: #d88771;
+  color: #fff;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+.todo {
+  margin: 0.5rem;
+  background-color: #fff;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+.todo-item {
+  flex: 1;
+  padding: 0rem 0.5rem;
+}
+.complete-btn,
+.trash-btn {
+  padding: 1rem;
+  border: none;
+  font-size: 1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.complete-btn {
+  background: #5ada3b;
+}
+.complete-btn:hover {
+  background: #79c965;
+}
+.trash-btn {
+  background: rgb(185, 30, 30);
+}
+.trash-btn:hover {
+  background: rgb(192, 62, 62);
+}
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+.fall {
+  transform: translate(8rem) rotate(90deg);
+  opacity: 0;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+select {
+  color: #d88771;
+  border: none;
+  outline: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1.1rem;
+  font-weight: 600;
+}
+select option {
+  font-weight: 600;
+  border-radius: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+}
+
+.select::after {
+  content: "\25bc";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  color: #d88771;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* responsiveness */
+@media (max-width: 700px) {
+  form input {
+    width: 50vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 560px) {
+  form input {
+    width: 45vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 460px) {
+  form input {
+    margin-left: 1rem;
+    width: 40vw;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  select{
+    width: 30vw;
+    padding: 1.1rem 0.4rem;
+  }
+}
+@media (max-width: 400px) {
+  form input {
+    margin-left: 1rem;
+    width: 40vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  select{
+    width: 30vw;
+    padding: 1.1rem 0.4rem;
+  }
+}
